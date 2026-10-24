@@ -4,7 +4,7 @@
 
 Code samples from my engineering and research work at Carnegie Mellon University, where I earned a B.S. in Electrical and Computer Engineering and Biomedical Engineering (2026) and am now pursuing an M.S. in Biomedical Engineering (Computational).
 
-The original code was written during my coursework and research. Refactoring, tests, and tooling were added with assistance from Claude Code.
+This repository is a portfolio. The projects were developed separately on my own machine and in course and team folders, then collected and uploaded here together, so the commit history here does not reflect how each project was built. The original code was written during my coursework and research. Refactoring, tests, and tooling were added with assistance from Claude Code.
 
 | Project | What it is | Language |
 |---|---|---|
