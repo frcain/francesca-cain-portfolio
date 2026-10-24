@@ -2,9 +2,7 @@
 
 ![tests](https://github.com/frcain/francesca-cain-portfolio/actions/workflows/tests.yml/badge.svg)
 
-Code samples from my engineering and research work at Carnegie Mellon University, where I earned a B.S. in Electrical and Computer Engineering and Biomedical Engineering (2026) and am now pursuing an M.S. in Biomedical Engineering (Computational).
-
-This repository is a portfolio. The projects were developed separately on my own machine and in course and team folders, then collected and uploaded here together, so the commit history here does not reflect how each project was built. The original code was written during my coursework and research. Refactoring, tests, and tooling were added with assistance from Claude Code.
+Selected code from my engineering and research work at Carnegie Mellon (B.S. ECE and BME, 2026; M.S. BME, Computational, in progress).
 
 | Project | What it is | Language |
 |---|---|---|
@@ -55,5 +53,9 @@ The tests cover pure logic only (braille encoding, the shared text helpers, coho
 - `pyproject.toml`: package metadata, dependencies, and mypy settings
 - `pytest.ini`, `ruff.toml`: pytest and ruff settings
 - `requirements.txt`: the same dependencies as a plain list
+
+## About this repository
+
+A curated portfolio: projects were developed separately and collected here, so the commit history doesn't reflect how each was built. Refactoring, tests, and tooling were added with help from Claude Code.
 
 Contact: fcain@andrew.cmu.edu
