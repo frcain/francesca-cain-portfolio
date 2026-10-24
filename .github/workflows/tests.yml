@@ -1,0 +1,27 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install package and dev tools
+        # Installs the core dependencies plus pytest, ruff, and mypy.
+        # The hardware and OCR extras (bleak, pytesseract) are not needed
+        # because the tests cover pure logic only.
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Lint (ruff)
+        run: ruff check .
+      - name: Type-check shared package (mypy)
+        run: mypy textanalysis
+      - name: Run tests (pytest)
+        run: python -m pytest -q

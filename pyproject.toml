@@ -1,0 +1,44 @@
+# Packaging and type-checking settings.
+# pytest settings live in pytest.ini and ruff settings in ruff.toml.
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "francesca-cain-portfolio"
+version = "0.1.0"
+description = "Code samples: BrailleMate, a force-sensing tether, and an engineering education text-analysis pipeline."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Francesca Cain", email = "fcain@andrew.cmu.edu" }]
+dependencies = [
+    "pandas>=1.5",
+    "scikit-learn>=1.2",
+    "matplotlib>=3.6",
+    "requests>=2.28",
+    "urllib3>=1.26",
+    "pillow>=9.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff", "mypy"]
+# Hardware and OCR extras (not needed for the tests)
+tether = ["bleak>=0.20"]
+ocr = ["pytesseract>=0.3"]  # also needs the Tesseract binary installed on the system
+
+[tool.setuptools]
+# Only the shared package is installed; the project folders are run as scripts.
+packages = ["textanalysis"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["textanalysis", "textanalysis.*"]
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true

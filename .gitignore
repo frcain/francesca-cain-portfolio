@@ -1,0 +1,17 @@
+# Data and outputs (never commit student data)
+*.csv
+*.xlsx
+*.zip
+ocr_out/
+OCR data/
+off_*/
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/

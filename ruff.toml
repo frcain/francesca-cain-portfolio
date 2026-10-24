@@ -1,0 +1,13 @@
+line-length = 100
+# Folders of standalone scripts, plus the repository root for the shared
+# textanalysis package, so isort treats them as first-party modules.
+src = [
+    ".",
+    "braillemate",
+    "engineering-education-text-analysis",
+    "engineering-education-text-analysis/cleaning_scripts",
+    "force-sensing-tether/desktop",
+]
+
+[lint]
+select = ["E", "F", "W", "I"]

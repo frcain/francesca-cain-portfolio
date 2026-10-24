@@ -1,0 +1,18 @@
+# Same packages as pyproject.toml. Preferred install: pip install -e ".[dev]"
+
+# Engineering education text analysis
+pandas>=1.5
+scikit-learn>=1.2
+matplotlib>=3.6
+
+# BrailleMate
+requests>=2.28
+urllib3>=1.26
+pillow>=9.0
+pytesseract>=0.3  # also needs the Tesseract binary installed on the system
+
+# Force-sensing tether desktop apps (also need tkinter, which ships with most Python installs)
+bleak>=0.20
+
+# Tests
+pytest>=7.0
